@@ -340,6 +340,7 @@ ul.banner-social-buttons {
     ul.banner-social-buttons li:last-child {
         margin-bottom: 0;
     }
+
 }
 
 footer {
@@ -386,4 +387,16 @@ h1, h2, h3, h4, h5, h6{
 }
 .navbar-custom a{
     color:black;
+}
+
+@media(max-width:767px) {
+  
+    .navbar-custom a{
+    color:white;
+}
+    .intro .intro-body .brand-heading {
+        font-size: 30px;
+    }
+
+
 }
