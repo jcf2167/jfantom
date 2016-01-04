@@ -3,54 +3,172 @@
 {%include "header.html"%}
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div class="container1" style="height:100%;position:aboslute">
     <!-- Navigation -->
     {%include "navbar.html"%}
-
-    <!-- Intro Header -->
     <header class="intro">
         <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2" style="padding-top:px;">
+            <span class="container">
+                <span class="row">
+                    <span class="col-md-8 col-md-offset-2" style="padding-top:px;">
                        
-                            <h1 class="brand-heading">Jessica Chen Fan</h1>
+                           <a href="/contact"> <h1 class="brand-heading">Jessica Chen Fan</h1></a>
                            
                   
-                    </div>
-                </div>
-            </div>
+                    </span>
+                </span>
+            </span>
         </div>
     </header>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+<div id="particles-js"></div>
 
+</div>
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- stats.js lib -->
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+<script type="text/javascript">
 
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 188,
+      "density": {
+        "enable": true,
+        "value_area": 1042.21783956259
+      }
+    },
+    "color": {
+      "value": "#969696"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 3
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.6,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 0,
+        "opacity_min": 0.5116086437498474,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 0,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 173,
+      "color": "#b14949",
+      "opacity": 0.16034120608655228,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 3.2,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 8898.936937803652,
+        "rotateY": 1282.7296486924183
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+var count_particles, stats, update;
 
-    <!-- Map Section -->
-    <div id="map"></div>
+count_particles = document.querySelector('.js-count-particles');
+update = function() {
+  stats.begin();
+  stats.end();
+  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+  }
+  requestAnimationFrame(update);
+};
+requestAnimationFrame(update);;
 
-     {%include "footer.html"%}
-
+</script>
   {%include "bottom.html"%}
 </body>
 
