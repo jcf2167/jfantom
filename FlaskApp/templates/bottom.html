@@ -1,11 +1,31 @@
    <!-- jQuery -->
-    <script src="static/js/jquery.js"></script>
-
+ 
+   <script src="static/js/jquery.js"></script>
+   <script src="static/js/typed.js"></script>
+   <script>
+        $(function(){
+            $(".element").typed({
+                strings: ["Why don't you shoot me an email..."  ],
+                typeSpeed: 5
+            });
+        });
+   </script>
     <!-- Bootstrap Core JavaScript -->
     <script src="static/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="static/js/jquery.easing.min.js"></script>
+
+
+<script type="text/javascript" src="static/js/shadowbox.js"></script>
+
+<script type="text/javascript">
+Shadowbox.init({
+ handleOversize: "drag",
+ modal: true,
+
+});
+</script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
@@ -23,3 +43,24 @@
   ga('send', 'pageview');
 
 </script>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=10767372; 
+var sc_invisible=1; 
+var sc_security="f1fb85a9"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify visitor
+statistics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/10767372/0/f1fb85a9/1/"
+alt="shopify visitor statistics"></a></div>
+</noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
